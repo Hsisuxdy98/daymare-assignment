@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ycvh3wpuf5fq"]
+
+[ext_resource type="PackedScene" uid="uid://b78bqk0ctqbw8" path="res://assets/Tiny_Treats_Charming_Kitchen_1.1_FREE/Assets/gltf/table_A.gltf" id="1_xa0as"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_so1t7"]
+size = Vector3(1.7801514, 1.0321045, 1.265686)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1931030309]
+
+[node name="table_A2" parent="." unique_id=416689602 instance=ExtResource("1_xa0as")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1320295034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00970459, 0.48904228, 0.007904053)
+shape = SubResource("BoxShape3D_so1t7")

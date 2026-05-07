@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b3jldq51r7i41"]
+
+[ext_resource type="Script" path="res://scripts/sheep.gd" id="1_sheep"]
+[ext_resource type="Texture2D" path="res://assets/minigame/sheep.png" id="2_sheep"]
+
+[node name="Sheep" type="Node2D"]
+script = ExtResource("1_sheep")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_sheep")

@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://ph3vt0oxqxtf"]
+
+[ext_resource type="Script" uid="uid://dik0sayp007w3" path="res://scripts/sheep_minigame.gd" id="1_mg"]
+[ext_resource type="Texture2D" uid="uid://cy84cr7qsyubi" path="res://assets/minigame/background.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://dmclsm6wqbgqx" path="res://assets/minigame/fence.png" id="3_fence"]
+[ext_resource type="PackedScene" path="res://scenes/sheep.tscn" id="4_sheep"]
+[ext_resource type="AudioStream" uid="uid://b0ne450v28hdb" path="res://sounds/Troubadeck 28 Quaint Questions.ogg" id="5_mwvyi"]
+[ext_resource type="Theme" uid="uid://c154l1panv76e" path="res://theme.tres" id="5_theme"]
+[ext_resource type="AudioStream" uid="uid://c7etly2i75k2e" path="res://sounds/pickup.wav" id="6_goyvx"]
+[ext_resource type="AudioStream" uid="uid://dqsdmih3cci5a" path="res://sounds/audio_2026-05-06_23-41-10 (mp3cut.net).mp3" id="7_i0a2r"]
+[ext_resource type="AudioStream" uid="uid://b5udxcq4p5h2i" path="res://sounds/audio_2026-05-06_23-41-10 (mp3cut.net) (1).mp3" id="8_vtamc"]
+
+[node name="SheepMinigame" type="Node2D" unique_id=979272180]
+script = ExtResource("1_mg")
+sheep_scene = ExtResource("4_sheep")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=148662836]
+position = Vector2(576, 324)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("2_bg")
+
+[node name="Fence" type="Sprite2D" parent="." unique_id=2087072008]
+position = Vector2(576.00006, 518)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("3_fence")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1774898219]
+one_shot = true
+
+[node name="AmbientSound" type="AudioStreamPlayer" parent="." unique_id=1997696415]
+stream = ExtResource("5_mwvyi")
+volume_db = -18.525
+autoplay = true
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=1822151466]
+stream = ExtResource("6_goyvx")
+volume_db = -6.0
+
+[node name="SuccessSound" type="AudioStreamPlayer" parent="." unique_id=1659129887]
+stream = ExtResource("7_i0a2r")
+volume_db = -20.0
+
+[node name="FailSound" type="AudioStreamPlayer" parent="." unique_id=1173360368]
+stream = ExtResource("8_vtamc")
+volume_db = -20.0
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1251673538]
+
+[node name="CountLabel" type="Label" parent="UI" unique_id=1833421896]
+offset_left = 499.0
+offset_top = 399.0
+offset_right = 699.0
+offset_bottom = 485.0
+theme = ExtResource("5_theme")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="UI" unique_id=373793640]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 180.0
+offset_bottom = 84.0
+theme = ExtResource("5_theme")
+theme_override_font_sizes/font_size = 72
+text = "Play"
+
+[node name="FadeRect" type="ColorRect" parent="UI" unique_id=895249608]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Instruction" type="Label" parent="UI" unique_id=1096835315]
+offset_left = 932.0
+offset_top = 22.0
+offset_right = 1120.0
+offset_bottom = 45.0
+theme = ExtResource("5_theme")
+text = "Press SPACE to jump"

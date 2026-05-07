@@ -1,0 +1,5 @@
+.godot/
+/android/
+.vscode/
+.idea/
+*.log

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d25wc5i35jmlx"]
+
+[ext_resource type="Script" uid="uid://dp8fkm5xr3jv2" path="res://scripts/pickupable.gd" id="1_qlus4"]
+[ext_resource type="PackedScene" uid="uid://1y2hmodaewpd" path="res://assets/stylooFoodAndKitchenAssetPackFreePack/glb/eggwhite.glb" id="2_34461"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6upkn"]
+radius = 0.0703125
+height = 0.17547607
+
+[node name="egg" type="RigidBody3D" unique_id=27614075]
+script = ExtResource("1_qlus4")
+item_type = "egg"
+item_name = "Egg"
+
+[node name="eggwhite2" parent="." unique_id=1601140814 instance=ExtResource("2_34461")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2064282529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.040618896, 0)
+shape = SubResource("CapsuleShape3D_6upkn")

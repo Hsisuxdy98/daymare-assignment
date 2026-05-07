@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b26hru4qmxuba"]
+
+[ext_resource type="PackedScene" uid="uid://dd5khhs62omlo" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/stove_single.fbx" id="1_bocw4"]
+[ext_resource type="Script" uid="uid://bgeer8308xue2" path="res://scripts/quest_interactable.gd" id="1_ieqif"]
+[ext_resource type="Script" uid="uid://dwn7qhk2s5trl" path="res://scripts/placement_spot.gd" id="3_ex2bf"]
+[ext_resource type="ArrayMesh" uid="uid://du5ndei7aaxsl" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/obj/pan_B.obj" id="4_ex2bf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_54o2j"]
+size = Vector3(2.0003662, 1.1733398, 2.0940628)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bocw4"]
+size = Vector3(0.7052002, 0.116654396, 0.7340088)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ex2bf"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+emission_enabled = true
+emission = Color(0.15127608, 0.15127608, 0.15127608, 1)
+emission_energy_multiplier = 1.45
+
+[node name="Stove" type="StaticBody3D" unique_id=310520231]
+script = ExtResource("1_ieqif")
+quest_index = 6
+
+[node name="stove_single" parent="." unique_id=1335885252 instance=ExtResource("1_bocw4")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1399199686]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00030517578, 0.5827637, 0.011234283)
+shape = SubResource("BoxShape3D_54o2j")
+
+[node name="PanSlot" type="StaticBody3D" parent="." unique_id=529132972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2330697, 0)
+script = ExtResource("3_ex2bf")
+accepts_type = "frying_pan"
+ghost_path = NodePath("PanSlotClue")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PanSlot" unique_id=2061397944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0020141602, 0.07301521, 0.018859863)
+shape = SubResource("BoxShape3D_bocw4")
+
+[node name="PanSlotClue" type="MeshInstance3D" parent="PanSlot" unique_id=1541930854]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+mesh = ExtResource("4_ex2bf")
+surface_material_override/0 = SubResource("StandardMaterial3D_ex2bf")

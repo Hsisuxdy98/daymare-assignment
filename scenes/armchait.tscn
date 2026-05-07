@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://x2lb2i7p6kld"]
+
+[ext_resource type="PackedScene" uid="uid://cp37opwpvhku2" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/armchair_pillows.gltf" id="1_yb4i1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w02c5"]
+size = Vector3(1.8121338, 1.0059204, 1.6125488)
+
+[node name="Armchait" type="StaticBody3D" unique_id=747065819]
+
+[node name="armchair_pillows2" parent="." unique_id=22722557 instance=ExtResource("1_yb4i1")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=77846034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00079345703, 0.002960205, 0.05065918)
+shape = SubResource("BoxShape3D_w02c5")

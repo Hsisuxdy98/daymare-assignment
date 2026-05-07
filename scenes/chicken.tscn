@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://drwdnjlbksoq2"]
+
+[ext_resource type="Script" uid="uid://dp8fkm5xr3jv2" path="res://scripts/pickupable.gd" id="1_isa2u"]
+[ext_resource type="PackedScene" uid="uid://cw126adcpk6bj" path="res://assets/stylooanimalassetpack/glb/chichen.glb" id="2_tl7hd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vtlia"]
+radius = 0.37479857
+
+[node name="Chicken" type="RigidBody3D" unique_id=1734066343]
+script = ExtResource("1_isa2u")
+
+[node name="chichen" parent="." unique_id=1680713350 instance=ExtResource("2_tl7hd")]
+transform = Transform3D(-0.7, 0, -1.0569706e-07, 0, 0.7, 0, 1.0569706e-07, 0, -0.7, 0, -0.4, -0.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1513419714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18)
+shape = SubResource("SphereShape3D_vtlia")

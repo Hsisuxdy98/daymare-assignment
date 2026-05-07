@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bk4rmpx5fg3vc"]
+
+[ext_resource type="Script" uid="uid://klw7wc3h52c2" path="res://scripts/door.gd" id="1_door"]
+[ext_resource type="PackedScene" uid="uid://5ik1wv6ngwl1" path="res://assets/KayKit_Prototype_Bits_1.1_FREE/Assets/gltf/Door_A.gltf" id="2_uvdjg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_door"]
+size = Vector3(1.6016846, 2.824414, 0.20079102)
+
+[node name="Door" type="Node3D" unique_id=886715174]
+
+[node name="DoorBody" type="RigidBody3D" parent="." unique_id=983250259]
+mass = 15.0
+angular_damp = 2.0
+script = ExtResource("1_door")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DoorBody" unique_id=359256660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8008423, 1.412207, 0.0022509769)
+shape = SubResource("BoxShape3D_door")
+
+[node name="Door_A2" parent="DoorBody" unique_id=1780048246 instance=ExtResource("2_uvdjg")]

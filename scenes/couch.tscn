@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ds7gelf354akv"]
+
+[ext_resource type="PackedScene" uid="uid://b7g5myoxyxbpb" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/couch.gltf" id="1_kxxyv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_83y15"]
+size = Vector3(3.001587, 0.51342773, 1.6349487)
+
+[node name="Couch" type="StaticBody3D" unique_id=33486861]
+
+[node name="couch2" parent="." unique_id=1641724473 instance=ExtResource("1_kxxyv")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1454248927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0006713867, 0.24328613, 0.06277466)
+shape = SubResource("BoxShape3D_83y15")

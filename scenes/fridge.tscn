@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://btmckmbj7ueos"]
+
+[ext_resource type="PackedScene" uid="uid://cx4skgocpk7g3" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/gltf/fridge_A.gltf" id="1_ipvyg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sp1gv"]
+size = Vector3(2.0013428, 2.5021973, 2.0207825)
+
+[node name="Fridge" type="StaticBody3D" unique_id=1605051806]
+
+[node name="fridge_A2" parent="." unique_id=231572664 instance=ExtResource("1_ipvyg")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1657483190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00018310547, 1.2503662, 0.00340271)
+shape = SubResource("BoxShape3D_sp1gv")

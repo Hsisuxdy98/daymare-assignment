@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bcasems5scc7m"]
+
+[ext_resource type="PackedScene" uid="uid://bcy4yv48oeusy" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/bed_single_B.gltf" id="1_nbqf0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3bkui"]
+size = Vector3(1.5054932, 0.477417, 3.0039063)
+
+[node name="Bed" type="StaticBody3D" unique_id=212441425]
+
+[node name="bed_single_B2" parent="." unique_id=251013505 instance=ExtResource("1_nbqf0")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2139036681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0006713867, 0.2612915, 0.001953125)
+shape = SubResource("BoxShape3D_3bkui")

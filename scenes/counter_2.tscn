@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c8xlmjkuuymoa"]
+
+[ext_resource type="PackedScene" uid="uid://c2yhj0hsnj0c5" path="res://assets/Tiny_Treats_Charming_Kitchen_1.1_FREE/Assets/gltf/countertop_straight_A.gltf" id="1_5u1aw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f1tld"]
+size = Vector3(2.0141602, 1.0791931, 1.4853516)
+
+[node name="Counter2" type="StaticBody3D" unique_id=1808748553]
+
+[node name="countertop_straight_A2" parent="." unique_id=962684505 instance=ExtResource("1_5u1aw")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1305941825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007080078, 0.4733112, 0.0073242188)
+shape = SubResource("BoxShape3D_f1tld")

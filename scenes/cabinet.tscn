@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cuju5ccqkyr73"]
+
+[ext_resource type="PackedScene" uid="uid://bru0p1u8wr5pq" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/cabinet_medium_decorated.gltf" id="1_xr4xt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_54rbh"]
+size = Vector3(1.7756348, 1.498169, 0.85791016)
+
+[node name="Cabinet" type="StaticBody3D" unique_id=1379011903]
+
+[node name="cabinet_medium_decorated2" parent="." unique_id=2110554149 instance=ExtResource("1_xr4xt")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1821678414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011108398, 0.24908447, 0.02368164)
+shape = SubResource("BoxShape3D_54rbh")

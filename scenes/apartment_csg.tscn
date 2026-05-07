@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://r7agku5fuuaf"]
+
+[ext_resource type="Material" uid="uid://v0dbqaeh4uo1" path="res://shaders/wall.tres" id="1_ex34s"]
+
+[node name="ApartmentGreyBox" type="Node" unique_id=853939874]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=2099159240]
+operation = 2
+use_collision = true
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1330981066]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.0060453573, 1.9952655, 3.9981794)
+use_collision = true
+size = Vector3(0.25, 4.2, 20)
+material = ExtResource("1_ex34s")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1445742164]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.9373174, 2, -2.7898426)
+size = Vector3(0.25, 4.2, 10.125)
+material = ExtResource("1_ex34s")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="CSGCombiner3D" unique_id=178345827]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.7412746, 0.81884086, -2.8334565)
+operation = 2
+size = Vector3(0.8599121, 2.4289649, 1.5)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1565812575]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.0622587, 0.81884086, -2.8334565)
+operation = 2
+size = Vector3(0.8599121, 2.4289649, 1.5)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1303603665]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.347591, 0.81884086, 4.091682)
+operation = 2
+size = Vector3(0.8599121, 2.4289649, 1.5)
+
+[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="." unique_id=1474047662]
+use_collision = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=902791106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39295578, -0.55003124, 5.6455917)
+use_collision = true
+size = Vector3(42.47107, 1, 31.276733)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1627965530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0060447454, 4.4952655, -2.9653218)
+use_collision = true
+size = Vector3(20, 1, 14.072998)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1341033856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.006044, 1.9952655, -3.0267231)
+use_collision = true
+size = Vector3(0.25, 4.2, 13.950195)
+material = ExtResource("1_ex34s")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=2014755102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9939556, 1.9952655, -2.9861958)
+use_collision = true
+size = Vector3(0.25, 4.2, 14.03125)
+material = ExtResource("1_ex34s")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=470364331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.006045, 1.9952655, -6.4088526)
+use_collision = true
+size = Vector3(0.25, 4.2, 7)
+material = ExtResource("1_ex34s")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1790023504]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.0060447454, 1.9952655, -10.001821)
+use_collision = true
+size = Vector3(0.25, 4.2, 20)
+material = ExtResource("1_ex34s")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=983056082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0060447454, 1.9952655, -6.4088526)
+use_collision = true
+size = Vector3(0.25, 4.2, 7)
+material = ExtResource("1_ex34s")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=332338274]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.476296, 2, 0.21015747)
+use_collision = true
+size = Vector3(0.25, 4.2, 7.047409)
+material = ExtResource("1_ex34s")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1962073296]
+transform = Transform3D(0.99999994, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, 0.99999994, -5.967235, 2, 2.1329503)
+use_collision = true
+size = Vector3(2.0496826, 4.2, 3.9275131)
+material = ExtResource("1_ex34s")
